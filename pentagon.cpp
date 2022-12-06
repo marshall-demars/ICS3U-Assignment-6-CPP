@@ -37,7 +37,7 @@ int main() {
             std::cout << "\nPlease enter a positive number.";
         else
             std::cout << "\nThe perimeter of a pentagon with the lengths of "
-                      << length_as_int << "cm is " << perimeter << "cm.";
+                      << length_as_int << " cm is " << perimeter << " cm.";
     } catch (std::invalid_argument) {
         std::cout << "\nInvalid Input." << std::endl;
     }
