@@ -11,7 +11,10 @@ int PerimeterCalculation(int length) {
     int perimeter;
 
     // Process
-    perimeter = length * 6;
+    if (length < 0)
+        return -1;
+    else
+        perimeter = length * 6;
 
     return perimeter;
 }
@@ -30,8 +33,11 @@ int main() {
         length_as_int = std::stoi(length_as_string);
         // Call function
         perimeter = PerimeterCalculation(length_as_int);
-        std::cout << "\nThe perimeter of a pentagon with the side lengths of "
-                  << length_as_int << " cm is " << perimeter << " cm.";
+        if (perimeter == -1)
+            return -1;
+        else
+            std::cout << "\nThe perimeter of a pentagon with the lengths of "
+                      << length_as_int << " cm is " << perimeter << " cm.";
     } catch (std::invalid_argument) {
         std::cout << "\nInvalid Input." << std::endl;
     }
