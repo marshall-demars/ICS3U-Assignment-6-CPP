@@ -14,7 +14,7 @@ int PerimeterCalculation(int length) {
     if (length < 0)
         return -1;
     else
-        perimeter = length * 6;
+        perimeter = length * 5;
 
     return perimeter;
 }
@@ -26,7 +26,7 @@ int main() {
     int perimeter;
 
     // Input
-    std::cout << "Enter the length of one of the hexagons sides (cm): ";
+    std::cout << "Enter the length of one of the pentagons sides (cm): ";
     std::cin >> length_as_string;
 
     try {
@@ -34,7 +34,7 @@ int main() {
         // Call function
         perimeter = PerimeterCalculation(length_as_int);
         if (perimeter == -1)
-            return -1;
+            std::cout << "\nPlease enter a positive number.";
         else
             std::cout << "\nThe perimeter of a pentagon with the lengths of "
                       << length_as_int << " cm is " << perimeter << " cm.";
